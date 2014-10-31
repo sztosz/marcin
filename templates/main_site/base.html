@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Strona kancelarii Marcina Andreasika we Wrocławiu" />
+  <meta name="keywords" content="kancelaria, wrocław, prawo, andreasik">
+  <meta name="author" content="HTML & CSS by Bartosz Nowak <sztosz [at] gmail>">
+  <title>{% block title %}Kancelaria Adwokacka Marcin Andreasik{% endblock %}</title>
+{#  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>#}
+  <link rel="stylesheet" href="/static/css/site.css" type="text/css" media="screen">
+</head>
+<body>
+<div id=site_container>
+  
+  <div id=logo_container>
+    <div id=address_in_logo>
+      <span class="bold">Kancelaria Adwokacka Marcin Andreasik</span><br>
+      ul.Manganowa 7 lok. 25<br>
+      53-441 Wrocław
+    </div>
+  </div> <!-- logo_container -->
+    
+  <div id=top_menu_container>
+    <div id=top_menu>
+      <ul>
+      <li><a href="{% url 'main_site:home' %}">STRONA GŁÓWNA</a></li
+        ><li><a href="{% url 'main_site:about' %}">O NAS</a></li
+        ><li><a href="{% url 'main_site:office' %}">KANCELARIA</a></li
+        ><li><a href="{% url 'main_site:services' %}">USŁUGI</a></li
+        ><li><a href="{% url 'main_site:pricing' %}">CENNIK</a></li
+        ><li><a href="{% url 'main_site:advices' %}">E-PORADY</a></li
+        ><li><a href="{% url 'main_site:publications' %}">PUBLIKACJE</a></li
+        ><li><a href="{% url 'main_site:extras' %}">DODATKI</a></li
+        ><li><a href="{% url 'main_site:contact' %}">KONTAKT</a></li>
+      </ul>
+    </div>
+
+    <div class="alignleft top_menu_brown_text">Kontakt: 668 59 21 43</div><div class="alignright top_menu_brown_text"><a href="mailto:m.andreasik@wroc-adwokat.pl"><span class="font_brown">m.andreasik@wroc-adwokat.pl</span></a></div>
+
+    <div style="clear: both;"></div>
+  </div> <!-- top_menu_container -->
+
+  {% if carousel %}
+    {% include "main_site/carousel.html" %}
+  {% endif %}
+
+  {% block content %}
+  {% endblock %}
+
+  <div id=bottom_menu_container>
+  <ul>
+    <li><a href="{% url 'main_site:home' %}">&#x27a4;&nbsp;Strona główna</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:about' %}">&#x27a4;&nbsp;O nas</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:office' %}">&#x27a4;&nbsp;Kancelaria</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:services' %}">&#x27a4;&nbsp;Usługi</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:pricing' %}">&#x27a4;&nbsp;Cennik</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:advices' %}">&#x27a4;&nbsp;E-porady</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:publications' %}">&#x27a4;&nbsp;Publikacje</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:extras' %}">&#x27a4;&nbsp;Dodatki</a></li
+      ><li>|</li
+      ><li><a href="{% url 'main_site:contact' %}">&#x27a4;&nbsp;Kontakt</a></li>
+    </ul>
+  </div> <!-- bottom_menu_container -->
+  
+  <div id=footer_container>
+    <p class="alignleft bottom_menu_brown_text" >Copyright by Kancelaria Adwokacka Marcin Andreasik &copy; Strona używa ciasteczek</p>
+    <p class="alignright bottom_menu_brown_text">Design by Artswan Studio Graficzne</p>
+  </div> <!-- footer_container -->
+
+<script src="/static/js/site.js"></script>
+
+</div>
+</body>
+</html>

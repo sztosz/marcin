@@ -1,0 +1,135 @@
+{% extends "main_site/base.html" %}
+{% block title %}Usługi | Kancelaria Adwokacka Marcin Andreasik{% endblock %}
+{% block content %}
+
+<div class=main_container>
+
+  <div class=main_container_logo>
+    <div class="main_container_header">USŁUGI</div>
+    <img class="rotating_logo " src="/static/img/logo.gif">
+  </div>
+
+  <div class="clear"></div>
+
+  <img src="/static/img/shapes/handcuffs.png" class="img_on_left_wrap service_icon_resize vertical_middle" onclick="toggle_visibility('criminal');"><h3 onclick="toggle_visibility('criminal');">Sprawy Karne <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="criminal">
+    <p>Sprawy Karne zajmują znaczące miejsce w działalności Kancelarii. Udzielamy kompleksowej pomocy prawnej, działamy w charakterze obrońcy i reprezentujemy Klientów w toku postępowania przygotowawczego (m.in. przed Policją i Prokuraturą) oraz przez Sądami wszystkich instancji, w tym także Sądem Najwyższym.</p>
+    <p>Kancelaria podejmuje się obrony w sprawach z zakresu prawa karnego, włącznie z prawem karnym wykonawczym, prawa karnego skarbowego, prawa wykroczeń, ustawy o przeciwdziałaniu narkomanii oraz prawa karnego gospodarczego. Podejmujemy się, również obrony nieletnich.</p>
+    <p>Nasi Klienci mogą liczyć na pomoc i reprezentację przy zatrzymaniu oraz tymczasowym aresztowaniu. Reprezentując pokrzywdzonych w sprawach karnych, zarówno na etapie postępowania przygotowawczego, jak i sądowego, dbamy o zabezpieczenie ich praw w celu realizacji roszczeń cywilnych, w szczególności odszkodowawczych.</p>
+  </div>
+  <hr>
+
+  <img src="/static/img/shapes/the_other_bust.png" class="img_on_left_wrap service_icon_resize" onclick="toggle_visibility('economic');"><h3 onclick="toggle_visibility('economic');">Pomoc prawna oferowana przedsiębiorcom <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="economic">
+    <p>Kancelaria oferuje szeroką pomoc prawną w zakresie: doradztwa dla osób prowadzących działalność gospodarczą, firm prowadzonych w ramach spółek kapitałowych/osobowych oraz pozostałych jednostek organizacyjnych. </p>
+    <p>Oferta skierowana do przedsiębiorców obejmuje:</p>
+    <ol type="I">
+      <li onclick="toggle_visibility('registration');">ETAP – rejestracji działalności gospodarczej <small class="font_brown smaller_text">więcej...</small></li>
+      <ul id="registration">
+        <li>pomoc w rozpoczęciu działalności, a więc w zakładaniu i rejestracji podmiotów gospodarczych, w tym spółek prawa handlowego, jak również ich przekształcenia, łączenia i podziału,</li>
+        <li>kompleksowe przygotowanie nowo powstałym jednostką gospodarczym podstawowych aktów wykonawczych, koniecznych do ich prawidłowego funkcjonowania, tj. regulaminów, uchwał organów spółek, protokołów z walnych zgromadzeń, regulaminów wynagrodzeń oraz regulaminów pracy,</li>
+      </ul>
+      <li onclick="toggle_visibility('service');">ETAP – posługa przedsiębiorstwa <small class="font_brown smaller_text">więcej...</small></li>
+      <ul id="service">
+        <li>kompleksową obsługę prawną (udzielanie porad prawnych, opiniowanie i sporządzanie projektów umów/kontraktów, analizę prawną oraz podatkową podejmowanych przez przedsiębiorców działań,</li>
+        <li>reprezentację przed sądami, urzędami, organami administracji publicznej i podatkowej oraz organami ścigania w sprawach karnych gospodarczych,</li>
+        <li>udział w negocjacjach,</li>
+        <li>windykację należności związanych z prowadzoną działalnością gospodarczą na etapie postępowania polubownego, sądowego i egzekucyjnego,</li>
+        <li>umożliwiamy skorzystanie z Pieczęci prewencyjnej,</li>
+      </ul>
+      <li  onclick="toggle_visibility('ending');">ETAP – zakończenie działalności gospodarczej <small class="font_brown smaller_text">więcej...</small></li>
+      <ul id="ending">
+        <li>pomoc prawną: w przypadku podjęcia decyzji o zakończeniu prowadzenia działalności gospodarczej przez dany podmiot oraz przy procesie rozwiązania lub likwidacji danej jednostki, jak i udział w procesie ogłoszenia upadłości danego podmiotu.</li>
+      </ul>
+    </ol>
+    <p>Obsługa prawna może być związana z konkretnym zagadnieniem prawnym, może też mieć charakter okresowy albo stały. Natomiast stała obsługa prawna, to najbardziej popularna forma współpracy przedsiębiorcy z prawnikiem. Zostaje ona oparta na ukształtowanej zgodnie z potrzebami przedsiębiorcy umowie, zawartej pomiędzy Klientem a Kancelarią.</p>
+    <p>Ta forma współpracy zapewnia, przede wszystkim szybkość działania i optymalizację kosztów zamawianej pomocy prawnej. Wynagrodzenie za prowadzenie stałej obsługi prawnej firmy jest ustalane ryczałtowo za dany okres czasu lub według stawek godzinowych.</p>
+  </div>
+
+  <hr>
+  
+  <img src="/static/img/shapes/bust.png" class="img_on_left_wrap service_icon_resize" onclick="toggle_visibility('individual');"><h3 onclick="toggle_visibility('individual');">Pomoc prawna oferowana klientom indywidualnym <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="individual">
+    <p>Kancelaria udziela porad prawnych, reprezentuje Klientów przed sądami, urzędami oraz innymi instytucjami. W ramach tych działań sporządzane są pozwy, wnioski, środki zaskarżenia oraz inne pisma procesowe. Wykonujemy, również pisemne opinie, opracowania projektów i umów. Uczestniczymy w negocjacjach.</p>
+    <p>Istotnym działem Kancelarii są sprawy cywilne i gospodarcze. W szczególności oferujemy doradztwo i reprezentację w zakresie:</p>
+    <ul>
+      <li>spraw spadkowych,</li>
+      <li>sądowego dochodzenia roszczeń,</li>
+      <li>wykonania umów,</li>
+      <li>rozliczeń majątkowych,</li>
+      <li>nieruchomości (m.in.: dotyczących prawa własności oraz ograniczonych praw rzeczowych, zniesienie współwłasności, zasiedzenie, wydanie nieruchomości, obrót nieruchomościami, sprawy wieczystoksięgowe, eksmisja),</li>
+      <li>praw autorskich, dóbr osobistych.</li>
+    </ul>
+
+    <p>Duże znaczenie w działalności Kancelarii odgrywają sprawy odszkodowawcze i o zadośćuczynienie. W szczególności z tytułu szkody na osobie doznanej, na skutek takich zdarzeń jak:</p>
+    <ul>
+      <li>wypadki komunikacyjne,</li>
+      <li>wypadki losowe,</li>
+      <li>błędy lekarskie,</li>
+      <li>czyny o charakterze chuligańskim.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <img src="/static/img/shapes/insttytucje_publiczne.png" class="img_on_left_wrap service_icon_resize" onclick="toggle_visibility('public');"><h3 onclick="toggle_visibility('public');">Instytucje publiczne <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="public">
+    <p>W ramach oferowanej pomocy prawnej Kancelaria świadczy kompleksową obsługę prawną instytucją państwowym i samorządowym. Oferujemy obsługę prawną organów wykonawczych w/w podmiotów, wykładnię i interpretację powszechnie obowiązujących przepisów prawa, w tym prawa miejscowego z perspektywy realizowanych przez daną jednostkę zadań własnych i zleconych. Kancelaria zajmuje się opracowywaniem i opiniowanie projektów umów, sporządzaniem opinii prawnych i reprezentowaniem danych instytucji w procesach.</p>
+  </div>
+
+  <hr>
+
+  <img src="/static/img/shapes/family.png" class="img_on_left_wrap service_icon_resize" onclick="toggle_visibility('family');"><h3 onclick="toggle_visibility('family');">Sprawy rodzinne <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="family">
+    <p>W ramach oferowanej pomocy prawnej Kancelaria prowadzi sprawy o:</p>
+    <ul>
+      <li>rozwód i separację,</li>
+      <li>alimenty,</li>
+      <li>ustalenie kontaktów z dziećmi,</li>
+      <li>ustanowienie rozdzielności majątkowej,</li>
+      <li>podział majątku wspólnego, w tym także rozliczenia związków konkubenckich,</li>
+      <li>ubezwłasnowolnienie</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <img src="/static/img/shapes/piggybank.png" class="img_on_left_wrap service_icon_resize" >
+  <h3 onclick="toggle_visibility('bankruptcy');">Upadłość konsumencka <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="bankruptcy">
+    <p>Osobom fizycznym, które z uwagi na trudną sytuację życiową wpadły w tzw. „spiralę długów” oferujemy pomoc prawną w procesie ogłoszenia i przeprowadzenia upadłości konsumenckiej, która daje możliwość umorzenia zobowiązań osoby fizycznej nieprowadzącej działalności gospodarczej.</p>
+  </div>
+
+  <hr>
+
+  <img src="/static/img/shapes/guy_with_locker.png" class="img_on_left_wrap service_icon_resize" onclick="toggle_visibility('administration');"><h3 onclick="toggle_visibility('administration');">Sprawy administracyjne i podatkowe <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="administration">
+    <p>W ramach spraw administracyjnych i podatkowych oferujemy Państwu występowanie przed sądami, organami administracji publicznej, skarbowej i podatkowej. W szczególności proponujemy możliwość sporządzenia środków odwoławczych od zapadłych decyzji, tj. odwołań, wezwań organu do usunięcia naruszenia prawa, skarg do sądów administracyjnych, odwołań od decyzji skarbowych.</p>
+    <p>W ramach świadczonego doradztwa podatkowego oferujemy przedsiębiorcą pomoc w:</p>
+    <ul>
+      <li>opiniowaniu i analizowaniu podejmowanych przez przedsiębiorcę działań, mających na celu optymalizację podatkową,</li>
+      <li>przedstawianiu najkorzystniejszych rozwiązań podatkowych w przypadku zakładania oraz przekształcania podmiotów gospodarczych,</li>
+      <li>przeprowadzenie procedury skorzystania z instytucji ulgi „na złe długi”, która umożliwia podatnikom, którzy mają trudności z uzyskaniem od kontrahenta zapłaty za towar czy usługę „odzyskanie” kwoty zapłaconego podatku od danej czynności, przy spełnieniu ustawowych przesłanek. Procedura ta nazywana jest powszechnie ulgą na złe długi i dotyczy wierzytelności, których nieściągalność została uprawdopodobniona.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <img src="/static/img/shapes/guy_with_laptop.png" class="img_on_left_wrap service_icon_resize" onclick="toggle_visibility('work');"><h3 onclick="toggle_visibility('work');">Prawo pracy i zabezpieczeń społecznych <small class="font_brown smaller_text">więcej...</small></h3>
+  <div id="work">
+    <p>W ramach prowadzonej Kancelarii adwokackiej oferujemy Państwu pomoc prawną w zakresie reprezentacji Klienta przed sądem pracy, sporządzaniem oraz opiniowaniem umów o pracę (kontraktów menedżerskich, umów o zakazie konkurencji).</p>
+    <p>Istotnymi kwestiami z zakresu prawa pracy, którymi zajmujemy się w ramach świadczonej pomocy prawnej są zagadnienia zawiązanie z:</p>
+    <ul>
+      <li>rozwiązywaniem umów o pracę za wypowiedzeniem i bez wypowiedzenia,</li>
+      <li>ustalaniem odpowiedzialności materialnej pracowników,</li>
+      <li>dochodzeniem świadczeń pracowniczych,</li>
+      <li>ustaleniem istnienia stosunku pracy, pomimo zawartej umowy cywilnoprawnej (np. umowy zlecenia, umowy o dzieło),</li>
+      <li>mobbing,</li>
+      <li>wypadkami w pracy.</li>
+    </ul>
+    <p>W ramach pomocy prawnej udzielanej przez Kancelarię, prowadzimy wszelkie sprawy przeciwko Zakładowi Ubezpieczeń Społecznych. W szczególności zajmujemy się sporządzaniem odwołania od decyzji ZUS i reprezentujemy Klientów w dalszym postępowaniu.</p>
+  </div>
+
+</div> <!-- main_container -->
+
+{% endblock %}
