@@ -73,7 +73,7 @@ function cookies() {
 }
 
 function loader() {
-    if (document.title == 'Usługi | Kancelaria Adwokacka Marcin Andreasik') {
+    if (document.title == 'Usługi prawne i pomoc prawna | Marcin Andreasik') {
         service_initial_hidden();
     }
     cookies();
