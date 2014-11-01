@@ -8,6 +8,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', main_site.HomePageView.as_view(), name='home'),
-    url(r'^kancelaria/', include('main_site.urls', namespace='main_site')),
+    url(r'^', include('main_site.urls', namespace='main_site')),
 
 )
