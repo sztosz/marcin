@@ -9,8 +9,7 @@ function toggle_visibility(id) {
         e.style.display = 'block';
 }
 
-function service_initial_hidden() {
-    var ids = ['criminal', 'economic', 'registration', 'service', 'ending', 'individual', 'family', 'bankruptcy', 'administration', 'work', 'public'];
+function initial_hidden(ids) {
     var length = ids.length;
     for (var i = 0; i < length; i++) {
         var e = document.getElementById(ids[i]);
@@ -73,9 +72,6 @@ function cookies() {
 }
 
 function loader() {
-    if (document.title == 'Usługi prawne i pomoc prawna | Marcin Andreasik') {
-        service_initial_hidden();
-    }
     cookies();
 }
 

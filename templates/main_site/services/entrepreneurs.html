@@ -1,0 +1,37 @@
+{% extends "main_site/base.html" %}
+{% block title %}Kancelaria | Kancelaria Adwokacka Marcin Andreasik{% endblock %}
+{% block content %}
+
+<div class=main_container>
+
+  <div class=main_container_logo>
+    <div class="main_container_header">POMOC PRAWNA OFEROWANA PRZEDSIĘBIORCOM</div>
+    <img class="rotating_logo " src="/static/img/logo.gif">
+  </div>
+  <p>Kancelaria adwokacka oferuje szeroką pomoc prawną w zakresie: doradztwa dla osób prowadzących działalność gospodarczą, obsługi prawnej firm prowadzonych w ramach spółek kapitałowych/osobowych oraz pozostałych jednostek organizacyjnych.</p>
+    <p>Usługi prawne skierowana do przedsiębiorców obejmują:</p>
+    <ol type="I">
+      <li onclick="toggle_visibility('registration');">ETAP – rejestracji działalności gospodarczej <small class="font_brown smaller_text">więcej...</small></li>
+      <ul id="registration">
+        <li>pomoc prawna w rozpoczęciu działalności, a więc w zakładaniu i rejestracji podmiotów gospodarczych, w tym spółek prawa handlowego, jak również ich przekształcenia, łączenia i podziału,</li>
+        <li>kompleksowe przygotowanie nowo powstałym jednostką gospodarczym podstawowych aktów wykonawczych, koniecznych do ich prawidłowego funkcjonowania, tj. regulaminów, uchwał organów spółek, protokołów z walnych zgromadzeń, regulaminów wynagrodzeń oraz regulaminów pracy,</li>
+      </ul>
+      <li onclick="toggle_visibility('service');">ETAP – posługa przedsiębiorstwa <small class="font_brown smaller_text">więcej...</small></li>
+      <ul id="service">
+        <li>kompleksową obsługę prawną (udzielanie porad prawnych, opiniowanie i sporządzanie projektów umów/kontraktów, analizę prawną oraz podatkową podejmowanych przez przedsiębiorców działań,</li>
+        <li>reprezentację przed sądami, urzędami, organami administracji publicznej i podatkowej oraz organami ścigania w sprawach karnych gospodarczych,</li>
+        <li>udział w negocjacjach,</li>
+        <li>windykację należności związanych z prowadzoną działalnością gospodarczą na etapie postępowania polubownego, sądowego i egzekucyjnego,</li>
+        <li>umożliwiamy skorzystanie z Pieczęci prewencyjnej</li>
+      </ul>
+      <li onclick="toggle_visibility('ending');">ETAP – zakończenie działalności gospodarczej <small class="font_brown smaller_text">więcej...</small></li>
+      <ul id="ending">
+        <li>w przypadku podjęcia decyzji o zakończeniu prowadzenia przedsiębiorstwa przez dany podmiot, kancelaria adwokacka udziela pomocy prawnej w procesie rozwiązania lub likwidacji danej jednostki, jak i udział w procesie ogłoszenia upadłości danego podmiotu.</li>
+      </ul>
+    </ol>
+    <p>Obsługa prawna firm, może być związana z konkretnym zagadnieniem prawnym, może też mieć charakter okresowy albo stały. Natomiast stała obsługa prawna, to najbardziej popularna forma współpracy przedsiębiorcy z prawnikiem. Usługi prawne świadczone w ramach stałej obsługi prawnej firm, oparte są na ukształtowanej zgodnie z potrzebami przedsiębiorcy umowie, zawartej pomiędzy Klientem, a kancelarią adwokacką.</p>
+    <p>Ta forma pomocy prawnej zapewnia, przede wszystkim szybkość działania i optymalizację kosztów zamawianej usługi prawnej. Wynagrodzenie za prowadzenie stałej obsługi prawnej firmy jest ustalane ryczałtowo, za dany okres czasu lub według stawek godzinowych.</p>
+
+</div> <!-- main_container -->
+
+{% endblock %}

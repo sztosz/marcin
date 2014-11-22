@@ -68,15 +68,6 @@ class OfficePageView(TemplateView):  # DONE
         return context
 
 
-class ServicesPageView(TemplateView):  # DONE
-
-    template_name = 'main_site/services.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['carousel'] = False
-        return context
-
 
 class PricingPageView(TemplateView):  # DONE
 
