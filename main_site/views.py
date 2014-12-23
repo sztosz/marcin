@@ -29,7 +29,7 @@ class ContactFormView(FormView):  # WIP
         name = form.cleaned_data['name']
         phone = form.cleaned_data['phone']
 
-        message = 'IMIĘ I NAZWISKO: {} \nTELEFON {} \n\n{}'.format(name, phone, form.cleaned_data['message'])
+        message = 'IMIĘ I NAZWISKO: {} \nADRES EMAIL: {} \nTELEFON {} \n\n{}'.format(name, from_email, phone, form.cleaned_data['message'])
         # message = form.cleaned_data['message']
 
         send_mail(subject, message, from_email, ['m.andreasik@wroc-adwokat.pl'], fail_silently=False)
