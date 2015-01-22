@@ -20,6 +20,9 @@ class ContactFormView(FormView):  # WIP
         context['carousel'] = False
         return context
 
+    def form_invalid(self, form):
+        return self.render_to_response(self.get_context_data(form=form, form_invalid=True))
+
     def form_valid(self, form):
         subject = form.cleaned_data['topic']
 
@@ -32,7 +35,7 @@ class ContactFormView(FormView):  # WIP
         message = 'IMIĘ I NAZWISKO: {} \nADRES EMAIL: {} \nTELEFON {} \n\n{}'.format(name, from_email, phone, form.cleaned_data['message'])
         # message = form.cleaned_data['message']
 
-        send_mail(subject, message, from_email, ['m.andreasik@wroc-adwokat.pl'], fail_silently=False)
+        print(send_mail(subject, message, from_email, ['sztosz@gmail.com'], fail_silently=False))
 
         return HttpResponseRedirect(self.get_success_url())
 
@@ -66,7 +69,6 @@ class OfficePageView(TemplateView):  # DONE
         context = super().get_context_data(**kwargs)
         context['carousel'] = False
         return context
-
 
 
 class PricingPageView(TemplateView):  # DONE
