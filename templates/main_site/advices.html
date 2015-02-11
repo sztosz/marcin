@@ -2,52 +2,79 @@
 {% block title %}E-Porady | Kancelaria Adwokacka Marcin Andreasik{% endblock %}
 {% block content %}
 
-<div class=main_container>
-
-  <div class=main_container_logo>
-    <div class="main_container_header">E - PORADY</div>
-    <img class="rotating_logo " src="/static/img/logo.gif">    
-  </div>
-
-  <div>
-{#    <img src="/static/img/stethoscope_with_hammer.png" class="advices_icon_resize img_on_right_wrap">#}
-    <p class="p">Z myślą o Klientach, którzy z uwagi na zaistniałą sytuację życiową nie są w stanie spotkać się z nami w siedzibie kancelarii adwokackiej, celem uzyskania porady prawnej, proponujemy pomoc prawną w formie e-porady, za pośrednictwem poczty elektronicznej.</p>
-  </div>
-  <p>W celu skorzystania z porady prawnej on-line należy:</p>
-  <div class="advices_ul">
-    <ul>
-      <li><span class="normal">Przesłać do kancelarii prawnej wiadomość e-mail zawierającą: pytanie wraz z opisem nurtującego zagadnienia oraz informacją, czy w danym stanie faktycznym i prawnym nie biegnie określony termin prawnomaterialny lub sądowy.</span></li>
-      <li><span class="normal">Bez zbędnej zwłoki otrzymają Państwo zwrotnego e-maila, w którym zaproponujemy cenę za udzieloną poradę prawną wraz z określeniem terminu udzielenia porady. Czas realizacji usługi wynosi przeciętnie od 2 do 5 dni. W przypadku, w którym istniałoby zagrożenie upływu, jakichkolwiek terminów, prosimy o bezzwłoczny kontakt telefoniczny z kancelarią. Jednocześnie w przedmiotowej wiadomości, adwokat zajmujący się sprawą może poprosić o dalsze informacje potrzebne do udzielenia rzetelnej odpowiedzi na postawione pytania.</span></li>
-      <li><span class="normal">Jeżeli zaakceptują Państwo warunki zaproponowanej pomocy prawnej on-line, należy dokonać wpłaty za poradę prawną na podany na stronie internetowej rachunek bankowy.</span></li>
-      <li><span class="normal">Po dokonaniu wpłaty otrzymają Państwo wiadomość zwrotną wraz z udzieloną poradą prawną, w zakreślonym wcześniej terminie.</span></li>
-      <li><span class="normal">Kancelaria adwokacka ma prawo odmówić udzielenia e-porady prawnej, o czym Klient zostanie poinformowany bez zbędnej zwłoki drogą mailową.</span></li>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
     </ul>
-  </div>
-  <p>Z uwagi na fakt, że e-porady udzielane są wyłącznie na podstawie danych przedkładanych przez Klienta, adwokat nie ponosi odpowiedzialności za wszelkiego rodzaju niedokładności, niezgodności, niedopowiedzenia wynikające z błędnie przedstawionego stanu faktycznego.</p>
-  <p>Informuję, że przekazywane przez Państwa informacje w ramach e-porad prawnych objęte są tajemnicą adwokacką i nie mogą zostać ujawnione. Wszelkie dane związane z udzieloną poradą prawną zostają usunięte z systemu teleinformacyjnego w terminie 2 tygodni od dnia udzielania porady.</p>
-  <div id="form" class="brown_border">
-    <div class="vertical_middle">
-      <form name="theform" action="{% url 'main_site:advices' %}" method="post" id="theform">
-        {% csrf_token %}
-        <label for="name" class="form_field" id="id_name">Imię i Nazwisko:</label><br>
-        <input type="text" class="px3border form_field" name="name" value="{% if form.name.value %}{{ form.name.value }}{% endif %}" id="name"/><br>
-        <label for="phone" class="form_field" id="id_phone">Telefon:</label><br>
-        <input type="text" class="px3border form_field" name="phone" value="{% if form.phone.value %}{{ form.phone.value }}{% endif %}" id="phone"/><br>
-        <label for="email" class="form_field" id="id_email">Adres email:</label><br>
-        <input type="text" class="px3border form_field" name="email" value="{% if form.email.value %}{{ form.email.value }}{% endif %}" id="email"/><br>
-        <label for="topic" class="form_field" id="id_topic">Temat wiadomości:</label><br>
-        <input type="text" class="px3border form_field" name="topic" value="{% if form.topic.value %}{{ form.topic.value }}{% endif %}" id="topic"/><br>
-        <label for="message" class="form_field" id="id_message">Wiadomość:</label><br>
-        <textarea name="message" class="px3border form_field" rows="10" cols="37" id="message">{% if form.message.value %}{{ form.message.value }}{% endif %}</textarea><br>
-        <input type="submit" class="px3border form_field" value="Wyślij"/><br>
-      </form>
-{#      {% load crispy_forms_tags %}#}
-{#      {% crispy form %}#}
+  {% endif %}
+
+  <div class=main_container>
+
+    <div class=main_container_logo>
+      <div class="main_container_header">E - PORADY</div>
+      <img class="rotating_logo " src="/static/img/logo.gif">
     </div>
-    <div class="vertical_middle"><img class="img_on_left_wrap" src="/static/img/hand_with_pen.png"></div>
-  </div>
-</div> <!-- main_container -->
-{% if form_invalid %}
-  <script>window.alert("Proszę wypełnić wszystkie pola formularza kontaktowego").fontcolor("red");</script>
-{% endif %}
+
+    <div>
+      {#    <img src="/static/img/stethoscope_with_hammer.png" class="advices_icon_resize img_on_right_wrap">#}
+      <p class="p">Z myślą o Klientach, którzy z uwagi na zaistniałą sytuację życiową nie są w stanie spotkać się z nami
+        w siedzibie kancelarii adwokackiej, celem uzyskania porady prawnej, proponujemy pomoc prawną w formie e-porady,
+        za pośrednictwem poczty elektronicznej.</p>
+    </div>
+    <p>W celu skorzystania z porady prawnej on-line należy:</p>
+
+    <div class="advices_ul">
+      <ul>
+        <li><span class="normal">Przesłać do kancelarii prawnej wiadomość e-mail zawierającą: pytanie wraz z opisem nurtującego zagadnienia oraz informacją, czy w danym stanie faktycznym i prawnym nie biegnie określony termin prawnomaterialny lub sądowy.</span>
+        </li>
+        <li><span class="normal">Bez zbędnej zwłoki otrzymają Państwo zwrotnego e-maila, w którym zaproponujemy cenę za udzieloną poradę prawną wraz z określeniem terminu udzielenia porady. Czas realizacji usługi wynosi przeciętnie od 2 do 5 dni. W przypadku, w którym istniałoby zagrożenie upływu, jakichkolwiek terminów, prosimy o bezzwłoczny kontakt telefoniczny z kancelarią. Jednocześnie w przedmiotowej wiadomości, adwokat zajmujący się sprawą może poprosić o dalsze informacje potrzebne do udzielenia rzetelnej odpowiedzi na postawione pytania.</span>
+        </li>
+        <li><span class="normal">Jeżeli zaakceptują Państwo warunki zaproponowanej pomocy prawnej on-line, należy dokonać wpłaty za poradę prawną na podany na stronie internetowej rachunek bankowy.</span>
+        </li>
+        <li><span class="normal">Po dokonaniu wpłaty otrzymają Państwo wiadomość zwrotną wraz z udzieloną poradą prawną, w zakreślonym wcześniej terminie.</span>
+        </li>
+        <li><span class="normal">Kancelaria adwokacka ma prawo odmówić udzielenia e-porady prawnej, o czym Klient zostanie poinformowany bez zbędnej zwłoki drogą mailową.</span>
+        </li>
+      </ul>
+    </div>
+    <p>Z uwagi na fakt, że e-porady udzielane są wyłącznie na podstawie danych przedkładanych przez Klienta, adwokat nie
+      ponosi odpowiedzialności za wszelkiego rodzaju niedokładności, niezgodności, niedopowiedzenia wynikające z błędnie
+      przedstawionego stanu faktycznego.</p>
+
+    <p>Informuję, że przekazywane przez Państwa informacje w ramach e-porad prawnych objęte są tajemnicą adwokacką i nie
+      mogą zostać ujawnione. Wszelkie dane związane z udzieloną poradą prawną zostają usunięte z systemu
+      teleinformacyjnego w terminie 2 tygodni od dnia udzielania porady.</p>
+
+    <div id="form" class="brown_border">
+      <div class="vertical_middle">
+        <form name="theform" action="{% url 'main_site:advices' %}" method="post" id="theform">
+          {% csrf_token %}
+          <label for="name" class="form_field" id="id_name">Imię i Nazwisko:</label><br>
+          <input type="text" class="px3border form_field" name="name"
+                 value="{% if form.name.value %}{{ form.name.value }}{% endif %}" id="name"/><br>
+          <label for="phone" class="form_field" id="id_phone">Telefon:</label><br>
+          <input type="text" class="px3border form_field" name="phone"
+                 value="{% if form.phone.value %}{{ form.phone.value }}{% endif %}" id="phone"/><br>
+          <label for="email" class="form_field" id="id_email">Adres email:</label><br>
+          <input type="text" class="px3border form_field" name="email"
+                 value="{% if form.email.value %}{{ form.email.value }}{% endif %}" id="email"/><br>
+          <label for="topic" class="form_field" id="id_topic">Temat wiadomości:</label><br>
+          <input type="text" class="px3border form_field" name="topic"
+                 value="{% if form.topic.value %}{{ form.topic.value }}{% endif %}" id="topic"/><br>
+          <label for="message" class="form_field" id="id_message">Wiadomość:</label><br>
+          <textarea name="message" class="px3border form_field" rows="10" cols="37"
+                    id="message">{% if form.message.value %}{{ form.message.value }}{% endif %}</textarea><br>
+          <input type="submit" class="px3border form_field" value="Wyślij"/><br>
+        </form>
+        {#      {% load crispy_forms_tags %}#}
+        {#      {% crispy form %}#}
+      </div>
+      <div class="vertical_middle"><img class="img_on_left_wrap" src="/static/img/hand_with_pen.png"></div>
+    </div>
+  </div> <!-- main_container -->
+  {% if form_invalid %}
+    <script>window.alert("Proszę wypełnić wszystkie pola formularza kontaktowego").fontcolor("red");</script>
+  {% endif %}
 {% endblock %}

@@ -3,6 +3,7 @@ from django.views.generic import TemplateView, FormView
 from .forms import ContactForm
 from django.core.urlresolvers import reverse
 from django.core.mail import send_mail
+from django.contrib import messages
 
 
 class ContactFormView(FormView):  # WIP
@@ -35,7 +36,9 @@ class ContactFormView(FormView):  # WIP
         message = 'IMIĘ I NAZWISKO: {} \nADRES EMAIL: {} \nTELEFON {} \n\n{}'.format(name, from_email, phone, form.cleaned_data['message'])
         # message = form.cleaned_data['message']
 
-        print(send_mail(subject, message, from_email, ['sztosz@gmail.com'], fail_silently=False))
+        send_mail(subject, message, from_email, ['m.andreasik@wroc-adwokat.pl'], fail_silently=False)
+
+        messages.success(self.request, 'E-mail został wysłany pomyślnie.')
 
         return HttpResponseRedirect(self.get_success_url())
 
