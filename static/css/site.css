@@ -488,7 +488,7 @@ ol > li {
 
 ul > li {
   font-family: 'Arial', sans-serif;
-  font-size: 1.125em;
+  /*font-size: 1.125em;*/
   /*font-weight: bold;*/
   margin-top: 1em;
   margin-right: 1em;
@@ -498,7 +498,7 @@ ul > li {
 
 .advices_ul > ul > li {
   font-family: 'Arial', sans-serif;
-  /*font-size: 1.125em;*/
+  font-size: 1.125em;
   /*font-weight: bold;*/
   margin-top: 1em;
   margin-right: 1em;
@@ -559,4 +559,13 @@ ul > li {
   padding: 1em;
   margin: 1em;
   border-radius: 10px;
+}
+
+.pricing_p {
+  padding-left: 2em!important;
+  /*padding-right: 2em!important;*/
+}
+
+#registration, #service, #ending {
+  font-size: 1.125em;
 }
