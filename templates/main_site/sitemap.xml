@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.wroc-adwokat.pl/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/onas/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/kancelaria/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/cennik/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/eporady/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/publikacje/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/dodatki/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/kontakt/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/sprawykarne/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/przedsiebiorcy/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/klienciindywidulani/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/instytucjepubliczne/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/sprawyrodzinne/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/upadlosc/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/podatki/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.wroc-adwokat.pl/uslugi/prawopracy/</loc>
+  <priority>0.64</priority>
+</url>
+</urlset>
