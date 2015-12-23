@@ -5,6 +5,7 @@ from main_site.views import *
 
 urlpatterns = patterns(
     '',
+    url(r'^sitemap.xml$', TemplateView.as_view(template_name='sitemap.xml')),
     url(r'^$', HomePageView.as_view(), name='home'),
     url(r'^onas/$', AboutPageView.as_view(), name='about'),
     url(r'^kancelaria/$', OfficePageView.as_view(), name='office'),
